@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap');
+
+@font-face {
+    src: url('https://raw.githubusercontent.com/google/fonts/main/ofl/montserratalternates/MontserratAlternates-Regular.ttf');
+    font-family: miFuente;
+  
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    background-color: #f7dee8; 
+    color: #0d0627;
+    text-align: center;
+}
+
+header {
+  background-color: #f9e6ee;
+  
+}
+
+nav {
+  background-color: #f7dee8;
+}
+
+
+header, main, nav, footer {
+  padding: 10px;
+  width: 100%;
+}
+
+
+h1, h2{
+  font-family: miFuente;
+}
+
+section,#portfolio div{ width: 100%;}
+#portfolio div {
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  padding: 0 20px;
+}
+
+#portfolio div img{
+  width: 80%;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.5);
+  transition: all 0.8s linear;
+}
+
+#portfolio div img:hover{
+  transform: scale(1.04);
+  box-shadow: 0 0 12px rgba(0,0,0,0.8);
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(61, 0, 31);
+    margin: 0 15px;
+    font-weight: bold;
+    
+}
+
+.introportfolio {
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+
+.servicios {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 20px;
+  flex-wrap: wrap;
+
+}
+
+.servicio {
+  width: 40% ;
+  max-width: 400px;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 12px rgba(0,0,0,0.05);
+  border-radius: 16px;
+  background-color: #fff;
+  padding: 20px;
+  flex-direction: column;
+  transition: all 0.5s ease;
+}
+
+
+h1 {
+    font-size: 40px;
+    animation: aparecer 3s steps(5);
+}
+
+@keyframes aparecer {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+.animado-contacto {
+  animation: miTexto 2s infinite alternate ease-in-out;
+}
+
+@keyframes miTexto {
+  from {
+      transform: scale(1);
+      color: #cc007a;
+  }
+  to {
+      transform: scale(1.3);
+      color: #5c002e;
+  }
+}
+
+
+#servicios {
+    background-color: #f7dee8;
+    padding: 20px;
+}
+
+#contacto a {
+  text-decoration: none;  
+  color: rgb(61, 0, 31);   
+  font-weight: bold;
+} 
+
+
+footer {
+    background-color: #251a21;
+    color: white;
+    padding: 15px 0;
+}
+
+
+@media (max-width: 768px) {
+  header, main, nav, footer{padding: 2px;}
+  div{width: 60%;margin: auto;}
+  header p{ text-align: left;}
+  h1 { font-size: 12px; }
+    nav a { display: inline-block; margin: 10px; }
+}
